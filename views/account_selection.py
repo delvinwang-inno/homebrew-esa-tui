@@ -1,4 +1,6 @@
 import json
+import os
+from pathlib import Path
 from textual import on
 from textual.app import ComposeResult
 from textual.containers import Vertical
@@ -27,13 +29,28 @@ class AccountSelectionView(Vertical):
 
     def load_accounts(self):
         table = self.query_one(DataTable)
-        try:
-            with open("accounts.json", "r") as f:
-                self.app.accounts = json.load(f)
-            for idx, acc in enumerate(self.app.accounts):
-                table.add_row(acc["name"], acc["ak_id"], key=str(idx))
-        except Exception as e:
-            self.app.log_message(f"[red]Error loading accounts.json: {e}[/red]")
+        accounts_dir = Path.home() / ".esa-tui"
+        accounts_file = accounts_dir / "accounts.json"
+
+        # Ensure directory exists
+        if not accounts_dir.exists():
+            accounts_dir.mkdir(parents=True, exist_ok=True)
+
+        # Ensure file exists
+        if not accounts_file.exists():
+            with open(accounts_file, "w") as f:
+                json.dump([], f)
+            self.app.accounts = []
+        else:
+            try:
+                with open(accounts_file, "r") as f:
+                    self.app.accounts = json.load(f)
+            except Exception as e:
+                self.app.log_message(f"[red]Error loading {accounts_file}: {e}[/red]")
+                self.app.accounts = []
+
+        for idx, acc in enumerate(self.app.accounts):
+            table.add_row(acc["name"], acc["ak_id"], key=str(idx))
 
     @on(DataTable.RowSelected)
     def on_row_selected(self, event: DataTable.RowSelected):
