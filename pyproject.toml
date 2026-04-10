@@ -1,8 +1,7 @@
 [project]
 name = "esa-tui"
-package-mode = false
 version = "0.1.0"
-description = ""
+description = "TUI for Alibaba Cloud ESA management"
 authors = [
     {name = "delvinwang-inno"}
 ]
@@ -13,6 +12,13 @@ dependencies = [
     "alibabacloud-tea-openapi (>=0.4.4,<0.5.0)",
     "python-dotenv (>=1.2.2,<2.0.0)",
     "textual (>=8.2.3,<9.0.0)"
+]
+
+[tool.poetry]
+packages = [
+    { include = "modules" },
+    { include = "views" },
+    { include = "main.py" }
 ]
 
 [project.scripts]
