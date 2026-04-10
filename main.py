@@ -369,6 +369,10 @@ class EsaTuiApp(App):
     def handle_nav_back_sites(self):
         self.switch_view("site_selection")
 
-if __name__ == "__main__":
+def main():
     app = EsaTuiApp()
     app.run()
+
+if __name__ == "__main__":
+    main()
+
