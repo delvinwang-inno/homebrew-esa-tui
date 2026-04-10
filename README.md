@@ -10,6 +10,11 @@ brew tap delvinwang/esa-tui
 brew install esa-tui
 ```
 
+If you are prompted for a username/password, ensure you don't have a global git config forcing SSH:
+`git config --global --unset url."git@github.com:".insteadOf`
+
+
+
 ### For Developers (Homebrew Tap Setup)
 
 If you are the maintainer and want to update the tap:
