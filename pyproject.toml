@@ -1,15 +1,19 @@
 [project]
 name = "esa-tui"
+package-mode = false
 version = "0.1.0"
 description = ""
 authors = [
     {name = "delvinwang"}
 ]
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12,<4.0"
 dependencies = [
+    "alibabacloud-esa20240910 (>=2.38.0,<3.0.0)",
+    "alibabacloud-tea-openapi (>=0.4.4,<0.5.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "textual (>=8.2.3,<9.0.0)"
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
