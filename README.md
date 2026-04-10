@@ -6,7 +6,7 @@ ESA-TUI for quick access to Alibaba Cloud ESA.
 To install `esa-tui` using Homebrew, you can tap this repository:
 
 ```bash
-brew tap delvinwang/esa-tui
+brew tap delvinwang-inno/esa-tui
 brew install esa-tui
 ```
 
@@ -27,7 +27,7 @@ If you are the maintainer and want to update the tap:
 
 2.  **Get the SHA256:**
     ```bash
-    curl -L https://github.com/delvinwang/homebrew-esa-tui/archive/refs/tags/v0.1.0.tar.gz | shasum -a 256
+    curl -L https://github.com/delvinwang-inno/homebrew-esa-tui/archive/refs/tags/v0.1.0.tar.gz | shasum -a 256
     ```
 
 3.  **Update `Formula/esa-tui.rb`:**

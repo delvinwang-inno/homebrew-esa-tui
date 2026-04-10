@@ -4,7 +4,7 @@ package-mode = false
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "delvinwang"}
+    {name = "delvinwang-inno"}
 ]
 readme = "README.md"
 requires-python = ">=3.12,<4.0"
