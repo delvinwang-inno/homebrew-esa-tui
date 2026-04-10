@@ -4,7 +4,7 @@ class EsaTui < Formula
   desc "TUI for Alibaba Cloud ESA management"
   homepage "https://github.com/delvinwang-inno/homebrew-esa-tui"
   url "https://github.com/delvinwang-inno/homebrew-esa-tui/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "c1841b2fc8399b5761c243d7ccaa9c4caf671f6ecb6b96712ff0d285ffeea8a2"
+  sha256 "a3891b9e16e2fb0e76f0baf2596b6155e4a65a18a97f7a7c3205f0f0feb18d35"
   license "MIT"
   head "https://github.com/delvinwang-inno/homebrew-esa-tui.git", branch: "main"
 
